@@ -2,6 +2,7 @@
   "name": "luka_shop",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Csikito.github.io/mini_e-commerce",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -11,6 +12,8 @@
     "react-toastify": "^9.1.3"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -35,6 +38,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^6.0.0",
     "tailwindcss": "^3.3.5"
   }
 }

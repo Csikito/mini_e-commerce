@@ -1,13 +1,24 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+
+:root {
+  --color-light-blue: rgb(0, 100, 177);
+  --color-light-green: rgb(45, 254, 84);
+  --color-light-red: rgb(247, 52, 48);
+  --color-gray: rgb(217, 217, 217);
+  --color-gift-section: rgba(22, 45, 80, 0.9);
+  --btn-color-blue: rgba(0, 18, 177, 0.5);
+  --btn-color-purple: rgba(120, 0, 177, 0.7);
+  --bg-color-img: rgb(0, 100, 177, 0.5);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  /* background-color: rgba(0, 0, 0, 0.8);
+  color: white; */
+  background-color: white;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }

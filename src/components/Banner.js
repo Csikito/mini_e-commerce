@@ -20,7 +20,7 @@ const Banner = () => {
               Air Jordan Luka 2 "Lake Bled"
             </h2>
             <Link
-              to="/product/1"
+              to="/mini_e-commerce/product/1"
               className="xs:w-[100px] sm:w-[150px]  tracking-wider sm:py-2 mx-5 xs:mx-0 mt-5 sm:mt-10 text-2xl space rounded-[5px] bg-gradient-to-t from-[--btn-color-blue] to-[--btn-color-purple] bg-opacity-90 text-white text-center hover:scale-105 duration-300"
             >
               Buy

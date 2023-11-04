@@ -22,7 +22,7 @@ const CartItem = ({ item }) => {
         </div>
         <div className="w-full flex justify-between">
           <div className="flex">
-            <p>Quantity:</p>
+            <p className="font-bold">Quantity:</p>
             <div className="flex border-2 border-black ml-2 select-none">
               <p
                 className="px-3 cursor-pointer hover:bg-[--color-light-blue] hover:text-white "

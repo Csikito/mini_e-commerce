@@ -12,8 +12,8 @@ const Cart = ({ handleCartClick, cartModal }) => {
   return (
     <div
       className={`${
-        cartModal ? "w-[270px] min-[450px]:w-[450px]" : " -right-[800px] "
-      } fixed top-0 bottom-0 right-0 overflow-y-auto h-full bg-gray-400 flex flex-col justify-between duration-300 z-30`}
+        cartModal ? "w-[270px] min-[450px]:w-[450px] right-0" : "-right-[800px]"
+      } fixed top-0 bottom-0 overflow-y-auto h-full bg-gray-400 flex flex-col justify-between ease-in-out duration-300 z-30`}
     >
       <div>
         <div

@@ -6,15 +6,15 @@ import Product from "../components/Product";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/mini_e-commerce",
     element: <App />,
     children: [
       {
-        path: "/",
+        path: "/mini_e-commerce",
         element: <Home />,
       },
       {
-        path: "/product/:id",
+        path: "/mini_e-commerce/product/:id",
         element: <Product />,
       },
     ],

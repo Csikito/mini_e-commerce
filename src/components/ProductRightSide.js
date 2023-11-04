@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import DataContext from "../context/DataContext";
 
 const ProductRightSide = ({ currentItem }) => {
@@ -10,9 +10,8 @@ const ProductRightSide = ({ currentItem }) => {
       <div className="text-2xl text-[--color-light-blue]">
         {currentItem.title}
       </div>
-      <div>starts</div>
-      <div className="">
-        <p className="">Details:</p>
+      <div className="pt-2">
+        <p className="font-bold">Details:</p>
         <p>
           The “Lake Bled” iteration comes in a polar, bright crimson, psychic
           blue, diffused blue, university blue and blue tint color scheme. The
@@ -32,7 +31,7 @@ const ProductRightSide = ({ currentItem }) => {
             €{currentItem.price}
           </p>
           <div className="flex pt-4">
-            <p>Quantity:</p>
+            <p className="font-bold">Quantity:</p>
             <div className="flex border-2 border-black ml-2 select-none">
               <p
                 className="px-3 cursor-pointer hover:bg-[--color-light-blue] hover:text-white "
@@ -52,7 +51,7 @@ const ProductRightSide = ({ currentItem }) => {
             </div>
           </div>
         </div>
-        <div className="min-[401px]:w-1/2 flex max-[400px]:flex-row flex-col items-end  sm:items-start  gap-2">
+        <div className="min-[401px]:w-1/2 flex max-[400px]:flex-row flex-col items-end  sm:items-start md:pl-4  gap-2">
           <button
             onClick={() => handleIncrementItem(currentItem, qua)}
             className="py-1 border-2 border-[--color-light-blue] text-[--color-light-blue] w-[100px] "

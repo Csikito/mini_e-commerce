@@ -22,11 +22,11 @@ const Navbar = () => {
             cartModal
               ? "top-0 bottom-0 left-0 right-0 w-full h-full bg-black opacity-70 z-20"
               : ""
-          } fixed duration-300`}
+          } fixed ease-in-out duration-300`}
         ></div>
         <Cart handleCartClick={handleCartClick} cartModal={cartModal} />
         <div className="max-w-[200px]">
-          <Link to="/">
+          <Link to="/mini_e-commerce">
             <img src={logo} alt="logo" />
           </Link>
         </div>

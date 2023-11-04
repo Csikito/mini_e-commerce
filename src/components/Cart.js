@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import DataContext from "../context/DataContext";
 import CartItem from "./CartItem";
@@ -34,18 +35,26 @@ const Cart = ({ handleCartClick, cartModal }) => {
           ))}
         </div>
       </div>
-      <div className="mx-10 my-5 flex flex-col items-center gap-6">
+      <div className="m-5 flex flex-col items-center gap-6">
         <div className="w-full flex justify-between">
-          <p>Subtotal:</p>
-          <p className="text-[--color-light-blue]">€{totalPrice}</p>
+          <p className="font-bold">Subtotal:</p>
+          <p className="text-[--color-light-blue] font-bold text-2xl">
+            €{totalPrice}
+          </p>
         </div>
-        <button
-          type="text"
-          onClick={notify}
-          className="bg-[--color-light-blue] text-white py-1 px-10 rounded-lg"
-        >
-          Pay
-        </button>
+        {cartItems.length > 0 ? (
+          <Link
+            to="/mini_e-commerce/payment"
+            type="text"
+            onClick={notify}
+            className="bg-[--color-light-blue] text-white py-1 px-10 rounded-lg"
+            onClickCapture={handleCartClick}
+          >
+            Pay
+          </Link>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );

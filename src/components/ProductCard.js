@@ -11,7 +11,9 @@ const ProductCard = ({ item }) => {
       </Link>
       <div className="px-2 pt-2">
         <p className="font-sans">{item.title}</p>
-        <span>€{item.price}</span>
+        <span className="text-[--color-light-blue] font-semibold">
+          €{item.price}
+        </span>
       </div>
     </div>
   );

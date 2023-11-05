@@ -20,10 +20,19 @@ const CartItem = ({ item }) => {
             €{item?.price}
           </p>
         </div>
+        {item.size ? (
+          <div className="flex items-center">
+            <p className=" font-bold">Size:</p>
+            <p className="ml-2 font-semibold">[ {item.customerSize} ]</p>
+          </div>
+        ) : (
+          ""
+        )}
+
         <div className="w-full flex justify-between">
           <div className="flex">
             <p className="font-bold">Quantity:</p>
-            <div className="flex border-2 border-black ml-2 select-none text-xs">
+            <div className="flex border-2 rounded-md border-black ml-2 select-none text-xs">
               <p
                 className="px-2 sm:px-3 flex justify-center items-center cursor-pointer hover:bg-[--color-light-blue] hover:text-white  font-bold"
                 onClick={() => handleCartItemQuyantity(item?.id, "dec")}

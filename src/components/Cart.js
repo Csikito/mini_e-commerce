@@ -19,7 +19,7 @@ const Cart = ({ handleCartClick, cartModal }) => {
         cartModal ? "w-[270px] min-[450px]:w-[450px] right-0" : "-right-[800px]"
       } fixed top-0 bottom-0 overflow-y-auto h-full bg-gray-400 flex flex-col justify-between ease-in-out duration-300 z-30`}
     >
-      <div className="relative h-full">
+      <div className="h-auto relative ">
         <div
           className="px-6 py-3 flex cursor-pointer "
           onClick={handleCartClick}
@@ -34,7 +34,7 @@ const Cart = ({ handleCartClick, cartModal }) => {
         </div>
         <div className="w-full h-full">
           {cartItems.length > 0 ? (
-            cartItems.map((item) => <CartItem key={item.id} item={item} />)
+            cartItems.map((item, index) => <CartItem key={index} item={item} />)
           ) : (
             <div className="h-full text-[200px] flex justify-center items-center opacity-40 ">
               <Link to="/mini_e-commerce/">
@@ -44,7 +44,7 @@ const Cart = ({ handleCartClick, cartModal }) => {
           )}
         </div>
       </div>
-      <div className="m-5 flex flex-col items-center gap-6">
+      <div className="m-5 mt-0 flex flex-col items-center gap-6">
         <div className="w-full flex justify-between">
           <p className="font-bold">Subtotal:</p>
           <p className="text-[--color-light-blue] font-bold text-2xl">
@@ -56,7 +56,7 @@ const Cart = ({ handleCartClick, cartModal }) => {
             to="/mini_e-commerce/payment"
             type="text"
             onClick={handleCartClick}
-            className="bg-[--color-light-blue] text-white py-1 px-10 rounded-lg"
+            className="py-1 border rounded-md border-[--color-light-blue] bg-gradient-to-t from-[--btn-color-blue] to-[--color-light-blue] hover:bg-gradient-to-b  text-white text-center w-[150px]"
           >
             Pay
           </Link>

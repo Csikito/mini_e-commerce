@@ -40,14 +40,14 @@ const SuccessfulPurchase = () => {
   }, 500);
 
   return (
-    <main className="w-full  h-[79vh] ">
+    <main className="w-full  h-auto ">
       <div className="flex flex-col items-center  ">
         <img
           src={successfull}
           alt="successfull-purchase"
           className=" w-[500px] p-10 "
         />
-        <p className="text-center text-2xl">
+        <p className="text-center text-2xl mx-4">
           <span className="font-bold text-[--color-light-blue]">
             Congratulations
           </span>
@@ -55,7 +55,7 @@ const SuccessfulPurchase = () => {
         </p>
         <Link
           to="/mini_e-commerce"
-          className="xs:w-[100px] md:w-[400px]  tracking-wider sm:py-2 mx-5 xs:mx-0 mt-5 sm:mt-10 text-2xl space rounded-[5px] bg-gradient-to-t from-[--btn-color-blue] to-[--color-light-blue] bg-opacity-90 text-white text-center hover:scale-105 duration-300"
+          className=" tracking-wider py-2 px-8 sm:px-32 mx-5 mt-10 text-2xl rounded-[5px] bg-gradient-to-t from-[--btn-color-blue] to-[--color-light-blue] bg-opacity-90 text-white text-center hover:scale-105 duration-300"
         >
           Back to home page
         </Link>

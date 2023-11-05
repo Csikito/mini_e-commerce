@@ -1,18 +1,26 @@
 import React, { useContext } from "react";
 import DataContext from "../context/DataContext";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const PaymentRightSide = () => {
-  const { setCartItems, setTotalPrice, setTotalQuantities } =
+  const { cartItems, setCartItems, setTotalPrice, setTotalQuantities } =
     useContext(DataContext);
   const navigate = useNavigate();
 
   const handlePaymentSubmitted = (e) => {
     e.preventDefault();
-    setCartItems([]);
-    setTotalPrice(0);
-    setTotalQuantities(0);
-    navigate("/mini_e-commerce/successful_purchase");
+
+    if (cartItems.length > 0) {
+      setCartItems([]);
+      setTotalPrice(0);
+      setTotalQuantities(0);
+      navigate("/mini_e-commerce/successful_purchase");
+    } else {
+      toast.error(`Your cart is empty!`, {
+        position: toast.POSITION.TOP_LEFT,
+      });
+    }
   };
 
   return (

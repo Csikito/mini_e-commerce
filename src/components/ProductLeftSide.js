@@ -5,7 +5,7 @@ const ProductLeftSide = ({ currentItem }) => {
   const [getImg, setGetImg] = useState(currentItem.img[0]);
 
   const handleImgClick = (e) => {
-    setGetImg(e.target.alt);
+    setGetImg(e.target.alt || e.target.lastChild.alt);
   };
 
   useEffect(() => {

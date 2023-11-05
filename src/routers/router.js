@@ -4,6 +4,7 @@ import App from "../App";
 import Home from "../components/Home";
 import Product from "../components/Product";
 import Payment from "../components/Payment";
+import SuccessfulPurchase from "../components/SuccessfulPurchase";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: "/mini_e-commerce/payment",
         element: <Payment />,
+      },
+      {
+        path: "/mini_e-commerce/successful_purchase",
+        element: <SuccessfulPurchase />,
       },
     ],
   },

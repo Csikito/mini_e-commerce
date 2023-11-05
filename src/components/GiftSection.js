@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 import gift from "../assets/image/luka/gift.png";
 import figure from "../assets/image/luka/figure.png";
 
-const GiftSec = () => {
+const GiftSection = () => {
   return (
     <section className="w-full my-12 lg:my-24 xl:my-36 ">
       <div className="h-full sm:h-[350px] md:h-[450px] lg:h-[550px] bg-[--color-gift-section] rounded-[25px] flex flex-col sm:flex-row justify-between items-center mx-3 sm:mx-10 my-2 ">
         <div className=" relative w-full h-full xs:w-3/2 z-10">
-          <div className="md:absolute -top-10 lg:-top-16 xl:-top-24  ">
+          <div className="md:absolute -top-16 lg:-top-16 xl:-top-24  ">
             <img
               src={figure}
-              className=" w-full md:w-[600px] lg:w-[650px]"
+              className=" w-full md:w-[600px] lg:w-[650px] pt-4"
               alt='Air Jordan Luka 2 "Lake Bled"'
             />
           </div>
@@ -46,4 +46,4 @@ const GiftSec = () => {
   );
 };
 
-export default GiftSec;
+export default GiftSection;

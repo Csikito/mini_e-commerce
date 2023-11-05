@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import DataContext from "../context/DataContext";
 
 const ProductRightSide = ({ currentItem }) => {
@@ -58,9 +59,13 @@ const ProductRightSide = ({ currentItem }) => {
           >
             Add to cart
           </button>
-          <button className="py-1 border-2 border-[--color-light-blue] bg-[--color-light-blue] text-white w-[100px]">
+          <Link
+            to="/mini_e-commerce/payment"
+            onClick={() => handleIncrementItem(currentItem, qua)}
+            className="py-1 border-2 border-[--color-light-blue] bg-[--color-light-blue] text-white text-center w-[100px]"
+          >
             Buy now
-          </button>
+          </Link>
         </div>
       </div>
     </div>

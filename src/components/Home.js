@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import Banner from "./Banner";
-import BestSellPro from "./BestSellPro";
-import GiftSec from "./GiftSec";
+import ProductsSection from "./ProductsSection";
+import GiftSection from "./GiftSection";
 import DataContext from "../context/DataContext";
 
 const Home = () => {
@@ -11,8 +11,12 @@ const Home = () => {
     <main className="flex justify-center">
       <div className="max-w-[1400px]">
         <Banner />
-        <BestSellPro product={product} />
-        <GiftSec />
+        <ProductsSection
+          product={product}
+          title="Premium Products"
+          subtitle="Excellent premium products"
+        />
+        <GiftSection />
       </div>
     </main>
   );

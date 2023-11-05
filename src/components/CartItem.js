@@ -25,16 +25,16 @@ const CartItem = ({ item }) => {
             <p className="font-bold">Quantity:</p>
             <div className="flex border-2 border-black ml-2 select-none text-xs">
               <p
-                className="px-2 sm:px-4 flex justify-center items-center cursor-pointer hover:bg-[--color-light-blue] hover:text-white  font-bold"
+                className="px-2 sm:px-3 flex justify-center items-center cursor-pointer hover:bg-[--color-light-blue] hover:text-white  font-bold"
                 onClick={() => handleCartItemQuyantity(item?.id, "dec")}
               >
                 -
               </p>
-              <p className="px-2 sm:px-4 flex justify-center items-center border-x-2 border-black text-xs font-bold">
+              <p className="w-[20px] sm:w-[32px] flex justify-center items-center border-x-2 border-black text-xs font-bold">
                 {item.quantity}
               </p>
               <p
-                className="px-2 sm:px-4 flex justify-center items-center cursor-pointer hover:bg-[--color-light-blue] hover:text-white text-xs font-bold"
+                className="px-2 sm:px-3 flex justify-center items-center cursor-pointer hover:bg-[--color-light-blue] hover:text-white text-xs font-bold"
                 onClick={() => handleCartItemQuyantity(item?.id, "inc")}
               >
                 +

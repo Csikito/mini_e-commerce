@@ -129,14 +129,18 @@ export const DataProvider = ({ children }) => {
         product,
         setProduct,
         qua,
+        setQua,
         handleIncrement,
         handleDecrement,
         handleIncrementItem,
         cartItems,
+        setCartItems,
         handleDeleteItem,
         handleCartItemQuyantity,
         totalQuantities,
+        setTotalQuantities,
         totalPrice,
+        setTotalPrice,
       }}
     >
       {children}

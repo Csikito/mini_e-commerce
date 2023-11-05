@@ -1,8 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
+import DataContext from "../context/DataContext";
+import { useNavigate } from "react-router-dom";
 
 const PaymentRightSide = () => {
+  const { setCartItems, setTotalPrice, setTotalQuantities } =
+    useContext(DataContext);
+  const navigate = useNavigate();
+
+  const handlePaymentSubmitted = (e) => {
+    e.preventDefault();
+    setCartItems([]);
+    setTotalPrice(0);
+    setTotalQuantities(0);
+    navigate("/mini_e-commerce/successful_purchase");
+  };
+
   return (
-    <div className="w-full max-w-full lg:max-w-1/3 lg:w-auto mx-4 ">
+    <form
+      className="w-full max-w-full lg:max-w-1/3 lg:w-auto mx-4"
+      onSubmit={(e) => handlePaymentSubmitted(e)}
+    >
       <div className="mb-10  px-5 rounded-lg bg-white shadow-lg">
         <h1 className="text-xl font-semibold text-gray-700 text-center">
           Shipping information
@@ -18,7 +35,6 @@ const PaymentRightSide = () => {
         <div className="my-3">
           <input
             type="tel"
-            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
             className="block w-full px-5 py-2 border rounded-lg bg-white shadow-lg placeholder-gray-400 text-gray-700 focus:ring focus:outline-none"
             placeholder="Phone Number"
             required
@@ -84,7 +100,7 @@ const PaymentRightSide = () => {
             </li>
           </ul>
         </div>
-        <main className="mt-4 p-4">
+        <div className="mt-4 p-4">
           <h1 className="text-xl font-semibold text-gray-700 text-center">
             Card payment
           </h1>
@@ -95,6 +111,7 @@ const PaymentRightSide = () => {
                 className="block w-full px-5 py-2 border rounded-lg bg-white shadow-lg placeholder-gray-400 text-gray-700 focus:ring focus:outline-none"
                 placeholder="Card holder"
                 maxLength="22"
+                required
               />
             </div>
             <div className="my-3">
@@ -103,6 +120,7 @@ const PaymentRightSide = () => {
                 className="block w-full px-5 py-2 border rounded-lg bg-white shadow-lg placeholder-gray-400 text-gray-700 focus:ring focus:outline-none"
                 placeholder="Card number"
                 maxLength="19"
+                required
               />
             </div>
             <div className="my-3 flex flex-col">
@@ -117,6 +135,7 @@ const PaymentRightSide = () => {
                   id=""
                   className="form-select appearance-none block w-full px-5 py-2 border rounded-lg bg-white shadow-lg placeholder-gray-400 text-gray-700 focus:ring focus:outline-none"
                   defaultValue="MM"
+                  required
                 >
                   <option disabled>MM</option>
                   <option value="01">01</option>
@@ -137,6 +156,7 @@ const PaymentRightSide = () => {
                   id=""
                   className="form-select appearance-none block min-w-[80px] w-full px-5 py-2 border rounded-lg bg-white shadow-lg placeholder-gray-400 text-gray-700 focus:ring focus:outline-none"
                   defaultValue="YY"
+                  required
                 >
                   <option disabled>YY</option>
                   <option value="2021">2021</option>
@@ -151,18 +171,22 @@ const PaymentRightSide = () => {
                   className="block w-full col-span-2 px-5 py-2 border rounded-lg bg-white shadow-lg placeholder-gray-400 text-gray-700 focus:ring focus:outline-none"
                   placeholder="Security code"
                   maxLength="3"
+                  required
                 />
               </div>
             </div>
           </div>
-        </main>
+        </div>
         <footer className=" p-4">
-          <button className="submit-button px-4 py-3 rounded-full bg-[--bg-color-img] text-[--color-light-blue] hover:text-white focus:ring focus:outline-none w-full text-xl font-semibold transition-colors">
+          <button
+            type="submit"
+            className="submit-button px-4 py-3 rounded-full bg-[--bg-color-img] text-[--color-light-blue] hover:text-white focus:ring focus:outline-none w-full text-xl font-semibold transition-colors"
+          >
             Pay now
           </button>
         </footer>
       </div>
-    </div>
+    </form>
   );
 };
 

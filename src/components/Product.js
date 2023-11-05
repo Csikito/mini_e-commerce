@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
-import BestSellPro from "./BestSellPro";
+import ProductsSection from "./ProductsSection";
 import ProductLeftSide from "./ProductLeftSide";
 import ProductRightSide from "./ProductRightSide";
 import DataContext from "../context/DataContext";
@@ -22,7 +22,11 @@ const Product = () => {
         <ProductLeftSide currentItem={currentItem} />
         <ProductRightSide currentItem={currentItem} />
       </section>
-      <BestSellPro product={bestSellerProduct} />
+      <ProductsSection
+        product={bestSellerProduct}
+        title="Best Seller Products"
+        subtitle="If you want to be the best, this is what you choose!"
+      />
       <div>
         <ToastContainer autoClose={2000} />
       </div>

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/mini_e-commerce/static/css/main.36f0ca6e.css",
-    "main.js": "/mini_e-commerce/static/js/main.85ccf744.js",
+    "main.css": "/mini_e-commerce/static/css/main.e826504d.css",
+    "main.js": "/mini_e-commerce/static/js/main.7436c1f6.js",
     "static/media/fig_1.png": "/mini_e-commerce/static/media/fig_1.535e8d35661deed729a1.png",
     "static/media/figure.png": "/mini_e-commerce/static/media/figure.535e8d35661deed729a1.png",
     "static/media/p_fig_2.png": "/mini_e-commerce/static/media/p_fig_2.67cf038d9f28e5b51ff6.png",
@@ -42,14 +42,15 @@
     "static/media/cap_dark_blue_3.webp": "/mini_e-commerce/static/media/cap_dark_blue_3.f9dcc4c96bced2f10687.webp",
     "static/media/cap_blue_3.webp": "/mini_e-commerce/static/media/cap_blue_3.cc0386130cbf4d8dd26f.webp",
     "static/media/cap_blue_2.webp": "/mini_e-commerce/static/media/cap_blue_2.388624f948a888972a69.webp",
+    "static/media/successfull.png": "/mini_e-commerce/static/media/successfull.40567ff9e9b28f655492.png",
     "static/media/banner.jpg": "/mini_e-commerce/static/media/banner.3aabcb95f658b1b92657.jpg",
     "static/media/luka_logo.png": "/mini_e-commerce/static/media/luka_logo.3159370aca0d10ab40b6.png",
     "index.html": "/mini_e-commerce/index.html",
-    "main.36f0ca6e.css.map": "/mini_e-commerce/static/css/main.36f0ca6e.css.map",
-    "main.85ccf744.js.map": "/mini_e-commerce/static/js/main.85ccf744.js.map"
+    "main.e826504d.css.map": "/mini_e-commerce/static/css/main.e826504d.css.map",
+    "main.7436c1f6.js.map": "/mini_e-commerce/static/js/main.7436c1f6.js.map"
   },
   "entrypoints": [
-    "static/css/main.36f0ca6e.css",
-    "static/js/main.85ccf744.js"
+    "static/css/main.e826504d.css",
+    "static/js/main.7436c1f6.js"
   ]
 }

@@ -53,8 +53,8 @@ const router = createBrowserRouter([
       {
         path: "/mini_e-commerce/admin/dasboard/edit_product/:id",
         element: <EditProduct />,
-        loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/${params.id}`),
+        // loader: ({ params }) =>
+        //   fetch(`http://localhost:5000/products/${params.id}`),
       },
     ],
   },

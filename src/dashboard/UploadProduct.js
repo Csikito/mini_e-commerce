@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Button, Label, Select, TextInput, Textarea } from "flowbite-react";
+import DataContext from "../context/DataContext";
+import { IoMdCloseCircle } from "react-icons/io";
 
 const UploadProduct = () => {
+  const { product, setProduct } = useContext(DataContext);
+
   const [proSize, setProSize] = useState("none");
   const [proImg, setProImg] = useState("");
   const [allProImg, setAllProImg] = useState([]);
@@ -28,12 +32,6 @@ const UploadProduct = () => {
     none: [],
   };
 
-  const handlerClickImg = () => {
-    const newImg = [...allProImg, proImg];
-    setAllProImg(newImg);
-    setProImg("");
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -52,11 +50,27 @@ const UploadProduct = () => {
       productDetails,
       allProImg,
     };
-    console.log(productObj);
+
+    const newProductsList = [...product, productObj];
+
+    setProduct(newProductsList);
+  };
+  //add img
+
+  const handlerClickImg = () => {
+    const newImg = [...allProImg, proImg];
+    setAllProImg(newImg);
+    setProImg("");
+  };
+
+  // delete img
+  const handleDeleteImg = (img) => {
+    const newImgList = allProImg.filter((item) => item !== img);
+    setAllProImg(newImgList);
   };
 
   return (
-    <div className="px-4 mx-4 my-12 bg-gray-500 w-full">
+    <section className="px-4 mx-4 my-12 bg-gray-500 w-full">
       <h2 className="mb-8 text-3xl font-bold">Upload A Product!</h2>
       <form
         className="flex lg:max-w-[1180px] flex-col flex-wrap gap-4"
@@ -165,15 +179,30 @@ const UploadProduct = () => {
             value={proImg}
             onChange={(e) => setProImg(e.target.value)}
           />
-          <span className=" text-5xl cursor-pointer" onClick={handlerClickImg}>
+        </div>
+        <div className="flex items-center gap-2">
+          <span
+            className=" w-10 h-10 text-center bg-white rounded-full text-4xl text-green-600 hover:text-green-400 cursor-pointer"
+            onClick={handlerClickImg}
+          >
             +
           </span>
-        </div>
-        <div>
           {allProImg.length > 0 ? (
-            allProImg.map((item, index) => <p key={index}>{item}</p>)
+            allProImg.map((item, index) => (
+              <div key={index} className="relative group  ">
+                <img
+                  src={item}
+                  alt={item}
+                  className="w-10 bg-white rounded-lg group-hover:opacity-50 group-hover:transition group-hover:duration-300 "
+                />
+                <IoMdCloseCircle
+                  className="absolute opacity-0  group-hover:opacity-100 text-red-500 cursor-pointer text-4xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-hover:transition group-hover:duration-300"
+                  onClick={() => handleDeleteImg(item)}
+                />
+              </div>
+            ))
           ) : (
-            <p className="text-red-400 text-sm">upload img</p>
+            <p className="text-red-400">upload img</p>
           )}
         </div>
 
@@ -182,7 +211,7 @@ const UploadProduct = () => {
           Upload product
         </Button>
       </form>
-    </div>
+    </section>
   );
 };
 

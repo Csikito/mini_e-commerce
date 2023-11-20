@@ -140,6 +140,7 @@ const data = () => {
       midsole's side. A full-length Formula23 foam cushioning system and Cushlon 3.0 cushioning on the medial 
       side ensure a smooth and comfortable ride.`,
       price: 180,
+      quantity: 452,
       size: [
         "36",
         "37",
@@ -175,6 +176,7 @@ const data = () => {
       midsole's side. A full-length Formula23 foam cushioning system and Cushlon 3.0 cushioning on the medial 
       side ensure a smooth and comfortable ride.`,
       price: 180,
+      quantity: 452,
       size: [
         "36",
         "37",
@@ -209,6 +211,7 @@ const data = () => {
        jock tag and molded logos inspired by prismatic, finely cut diamonds. 
       This product is made with 100% recycled polyester fibers.`,
       price: 210,
+      quantity: 452,
       size: ["S", "M", "L", "XL", "XXL", "3XL", "4XL", "5XL"],
       soldProduct: 101,
       img: [sle_blue_1, sle_blue_2],
@@ -221,6 +224,7 @@ const data = () => {
        jock tag and molded logos inspired by prismatic, finely cut diamonds. 
       This product is made with 100% recycled polyester fibers.`,
       price: 210,
+      quantity: 452,
       size: ["S", "M", "L", "XL", "XXL", "3XL", "4XL", "5XL"],
       soldProduct: 51,
       img: [sle_white_1, sle_white_2],
@@ -233,6 +237,7 @@ const data = () => {
        jock tag and molded logos inspired by prismatic, finely cut diamonds. 
       This product is made with 100% recycled polyester fibers.`,
       price: 210,
+      quantity: 452,
       size: ["S", "M", "L", "XL", "XXL", "3XL", "4XL", "5XL"],
       soldProduct: 64,
       img: [sle_dark_blue_1, sle_dark_blue_2],
@@ -244,6 +249,7 @@ const data = () => {
       Represent your favorite player in the Dallas Mavericks Luka Dončić Association Name & Number Tee by Nike.
       Inspired by the Dallas Mavericks Jersey, it displays bold name and number graphics.`,
       price: 40,
+      quantity: 452,
       size: ["S", "M", "L", "XL", "XXL", "3XL", "4XL", "5XL"],
       soldProduct: 94,
       img: [shirt_blue_1, shirt_blue_2],
@@ -255,6 +261,7 @@ const data = () => {
       Represent your favorite player in the Dallas Mavericks Luka Dončić Association Name & Number Tee by Nike.
       Inspired by the Dallas Mavericks Jersey, it displays bold name and number graphics.`,
       price: 40,
+      quantity: 452,
       size: ["S", "M", "L", "XL", "XXL", "3XL", "4XL", "5XL"],
       soldProduct: 87,
       img: [shirt_white_1, shirt_white_2],
@@ -264,6 +271,7 @@ const data = () => {
       title: "DALLAS MAVERICKS DONČIĆ 77 ROYAL SNAPBACK CAP",
       details: `Luka Dončić 77 Royal Snapback Cap`,
       price: 35,
+      quantity: 452,
       soldProduct: 47,
       img: [cap_blue_1, cap_blue_2, cap_blue_3],
     },
@@ -272,6 +280,7 @@ const data = () => {
       title: "DALLAS MAVERICKS DONČIĆ OVERSIZED NAVY SNAPBACK CAP",
       details: `Luka Dončić Oversized Navy Snapback Cap`,
       price: 35,
+      quantity: 452,
 
       soldProduct: 65,
       img: [cap_dark_blue_1, cap_dark_blue_2, cap_dark_blue_3],
@@ -283,6 +292,7 @@ const data = () => {
       Bright colors and an imaginative pattern celebrate Luka's bold moves while thick, lightweight foam 
       supports your feet comfortably.`,
       price: 40,
+      quantity: 452,
       size: [
         "36",
         "37",
@@ -310,6 +320,7 @@ const data = () => {
       With crisp graphics and a stylized take on Luka Doncic, this figure will leave no question about team spirit. 
       This unique piece is a must-have for any Dallas Mavericks fan.`,
       price: 120,
+      quantity: 452,
       soldProduct: 91,
       img: [fig_1, fig_2, fig_3, fig_4, fig_5],
     },
@@ -318,6 +329,7 @@ const data = () => {
       title: 'DALLAS MAVERICKS 10" LUKA DONČIĆ PLUSH',
       details: `10" Luka Dončić Plush`,
       price: 20,
+      quantity: 452,
       soldProduct: 25,
       img: [p_fig_3, p_fig_2, p_fig_1],
     },

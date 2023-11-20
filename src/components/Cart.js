@@ -21,7 +21,7 @@ const Cart = ({ handleCartClick, cartModal }) => {
     >
       <div className="h-auto relative ">
         <div
-          className="px-6 py-3 flex cursor-pointer "
+          className="pl-6 py-3 inline-flex cursor-pointer "
           onClick={handleCartClick}
         >
           <FaLongArrowAltLeft className="text-2xl" />

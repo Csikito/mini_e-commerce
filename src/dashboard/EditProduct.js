@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useMemo, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Button, Label, Select, TextInput, Textarea } from "flowbite-react";
 import DataContext from "../context/DataContext";
@@ -10,11 +10,12 @@ const EditProduct = () => {
   const navigate = useNavigate();
   const editProductArray = product.filter((item) => item.id.toString() === id);
 
-  const [proSize, setProSize] = useState("none");
+  const [proSize, setProSize] = useState("");
   const [proImg, setProImg] = useState("");
 
   const [editProduct, setEditProduct] = useState(editProductArray);
   const [editTitle, setEditTitle] = useState("");
+  const [editSize, setEditSize] = useState([]);
   const [editPrice, setEditPrice] = useState("");
   const [editQuantity, setEditQuantity] = useState("");
   const [editDetails, setEditDetails] = useState("");
@@ -22,47 +23,83 @@ const EditProduct = () => {
 
   useEffect(() => {
     setEditTitle(editProduct[0].title);
+    setEditSize(editProduct[0].size);
     setEditDetails(editProduct[0].details);
     setEditPrice(editProduct[0].price);
     setEditQuantity(editProduct[0].quantity);
     setEditImg(editProduct[0].img);
-  }, [editProduct]);
+  }, [editProduct, product]);
 
-  // const sizes = {
-  //   shoes: [
-  //     "36",
-  //     "37",
-  //     "38",
-  //     "39",
-  //     "40",
-  //     "41",
-  //     "42",
-  //     "43",
-  //     "44",
-  //     "45",
-  //     "46",
-  //     "47",
-  //     "48",
-  //     "49",
-  //     "50",
-  //   ],
-  //   clothe: ["S", "M", "L", "XL", "XXL", "3XL", "4XL", "5XL"],
-  //   none: [],
-  // };
+  const sizes = useMemo(() => {
+    return {
+      shoes: [
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+      ],
+      clothe: ["S", "M", "L", "XL", "XXL", "3XL", "4XL", "5XL"],
+      none: [],
+    };
+  }, []);
+
+  // getSize
+  useEffect(() => {
+    const compareArrays = (value) => {
+      if (value.length === 0) {
+        return;
+      } else {
+        for (let i = 0; i < value.length; i++) {
+          if (value[i] === editSize[i] && value.length !== 0) {
+            continue;
+          } else {
+            return;
+          }
+        }
+        return value;
+      }
+    };
+
+    const getProductSize = () => {
+      debugger;
+      const sizeKey = Object.entries(sizes);
+      const filtered = sizeKey.filter(([key, value]) => compareArrays(value));
+      const result = Object.fromEntries(filtered);
+      const justString = Object.keys(result)[0];
+      setProSize(justString);
+    };
+
+    if (proSize === "" && editSize.length !== 0) {
+      getProductSize();
+    }
+  }, [editSize, sizes, proSize]);
 
   // add product
   const handleEdit = (e) => {
     e.preventDefault();
+
+    const newSize = sizes[proSize];
 
     const newObj = {
       ...editProduct[0],
       title: editTitle,
       details: editDetails,
       quantity: editQuantity,
+      size: newSize,
       price: editPrice,
       editImg: editImg,
     };
-
     const newProductsList = product.map((item) =>
       item.id === newObj.id ? newObj : item
     );
@@ -90,9 +127,9 @@ const EditProduct = () => {
   };
 
   return (
-    <section className="px-4 mx-4 my-12  w-full">
+    <section className="px-2 sm:px-8  py-10  w-full">
       <h2 className="mb-8 text-3xl font-bold">Edit product!</h2>
-      <form className="flex lg:max-w-[1180px] flex-col flex-wrap gap-4  bg-slate-200 p-5 rounded mr-6 md:mr-0">
+      <form className="flex lg:max-w-[1180px] flex-col flex-wrap gap-4  bg-slate-200 p-5 rounded sm:mr-5">
         {/* first row */}
         <div className="flex gap-8">
           {/* product name */}

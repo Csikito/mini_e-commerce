@@ -74,10 +74,10 @@ const UploadProduct = () => {
   };
 
   return (
-    <section className="px-4 mx-4 my-12 w-full ">
+    <section className="px-2 sm:px-8  py-10  w-full ">
       <h2 className="mb-8 text-3xl font-bold">Upload A Product!</h2>
       <form
-        className="flex lg:max-w-[1180px] flex-col flex-wrap gap-4 bg-slate-200 p-5 rounded mr-6 md:mr-0"
+        className="flex lg:max-w-[1180px] flex-col flex-wrap gap-4 bg-slate-200 p-5 rounded sm:mr-5 "
         onSubmit={handleSubmit}
       >
         {/* first row */}

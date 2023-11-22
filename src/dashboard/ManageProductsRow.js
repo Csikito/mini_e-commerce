@@ -21,7 +21,7 @@ const ManageProductsRow = ({ item, no }) => {
       <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
         {item.title.length < 35 ? item.title : `${item.title.slice(0, 35)}...`}
       </Table.Cell>
-      <Table.Cell>852</Table.Cell>
+      <Table.Cell>{item.quantity}</Table.Cell>
       <Table.Cell>€{item.price}</Table.Cell>
       <Table.Cell className=" ">
         <Link

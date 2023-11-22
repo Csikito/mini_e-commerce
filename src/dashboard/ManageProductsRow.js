@@ -15,12 +15,15 @@ const ManageProductsRow = ({ item, no }) => {
   return (
     <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
       <Table.Cell>{no + 1 < 10 ? `0${no + 1}` : no + 1}</Table.Cell>
+      <Table.Cell>
+        <img src={`${item.img[0]}`} alt="item" className="w-[40px] " />
+      </Table.Cell>
       <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
         {item.title.length < 35 ? item.title : `${item.title.slice(0, 35)}...`}
       </Table.Cell>
       <Table.Cell>852</Table.Cell>
       <Table.Cell>€{item.price}</Table.Cell>
-      <Table.Cell className="flex gap-4">
+      <Table.Cell className=" ">
         <Link
           to={`/mini_e-commerce/admin/dasboard/edit_product/${item.id}`}
           className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"

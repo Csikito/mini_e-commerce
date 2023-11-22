@@ -58,9 +58,13 @@ const UploadProduct = () => {
   //add img
 
   const handlerClickImg = () => {
-    const newImg = [...allProImg, proImg];
-    setAllProImg(newImg);
-    setProImg("");
+    if (proImg !== "") {
+      const newImg = [...allProImg, proImg];
+      setAllProImg(newImg);
+      setProImg("");
+    } else {
+      alert("Fill in the part of product image link!");
+    }
   };
 
   // delete img
@@ -70,10 +74,10 @@ const UploadProduct = () => {
   };
 
   return (
-    <section className="px-4 mx-4 my-12 bg-gray-500 w-full">
+    <section className="px-4 mx-4 my-12 w-full ">
       <h2 className="mb-8 text-3xl font-bold">Upload A Product!</h2>
       <form
-        className="flex lg:max-w-[1180px] flex-col flex-wrap gap-4"
+        className="flex lg:max-w-[1180px] flex-col flex-wrap gap-4 bg-slate-200 p-5 rounded mr-6 md:mr-0"
         onSubmit={handleSubmit}
       >
         {/* first row */}
@@ -95,9 +99,9 @@ const UploadProduct = () => {
         </div>
 
         {/* 2nd Row */}
-        <div className="flex gap-8">
+        <div className="sm:flex gap-8">
           {/* product size */}
-          <div className="lg:w-1/3">
+          <div className="w-full sm:w-1/3">
             <div className="mb-2 block">
               <Label htmlFor="inputState" value="Product Size" />
             </div>
@@ -121,7 +125,7 @@ const UploadProduct = () => {
           </div>
 
           {/* price */}
-          <div className="lg:w-1/3">
+          <div className="w-full sm:w-1/3">
             <div className="mb-2 block">
               <Label htmlFor="price" value="Price" />
             </div>
@@ -134,7 +138,7 @@ const UploadProduct = () => {
               className="w-full"
             />
           </div>
-          <div className="lg:w-1/3">
+          <div className="w-full sm:w-1/3">
             <div className="mb-2 block">
               <Label htmlFor="quantity" value="Quantity" />
             </div>
@@ -202,7 +206,7 @@ const UploadProduct = () => {
               </div>
             ))
           ) : (
-            <p className="text-red-400">upload img</p>
+            <p className="text-red-400">Upload image</p>
           )}
         </div>
 

@@ -74,9 +74,13 @@ const EditProduct = () => {
 
   //add img
   const handlerClickImg = () => {
-    const newImg = [...editImg, proImg];
-    setEditImg(newImg);
-    setProImg("");
+    if (proImg !== "") {
+      const newImg = [...editImg, proImg];
+      setEditImg(newImg);
+      setProImg("");
+    } else {
+      alert("Fill in the part of product image link!");
+    }
   };
   // delete img
   const handleDeleteImg = (img) => {
@@ -86,9 +90,9 @@ const EditProduct = () => {
   };
 
   return (
-    <section className="px-4 mx-4 my-12 bg-gray-500 w-full">
+    <section className="px-4 mx-4 my-12  w-full">
       <h2 className="mb-8 text-3xl font-bold">Edit product!</h2>
-      <form className="flex lg:max-w-[1180px] flex-col flex-wrap gap-4">
+      <form className="flex lg:max-w-[1180px] flex-col flex-wrap gap-4  bg-slate-200 p-5 rounded mr-6 md:mr-0">
         {/* first row */}
         <div className="flex gap-8">
           {/* product name */}
@@ -110,9 +114,9 @@ const EditProduct = () => {
         </div>
 
         {/* 2nd Row */}
-        <div className="flex gap-8">
+        <div className="sm:flex gap-8">
           {/* product size */}
-          <div className="lg:w-1/3">
+          <div className="w-full sm:w-1/3">
             <div className="mb-2 block">
               <Label htmlFor="inputState" value="Product Size" />
             </div>
@@ -136,7 +140,7 @@ const EditProduct = () => {
           </div>
 
           {/* price */}
-          <div className="lg:w-1/3">
+          <div className="w-full sm:w-1/3">
             <div className="mb-2 block">
               <Label htmlFor="price" value="Price" />
             </div>
@@ -151,7 +155,7 @@ const EditProduct = () => {
               onChange={(e) => setEditPrice(e.target.value)}
             />
           </div>
-          <div className="lg:w-1/3">
+          <div className="w-full sm:w-1/3">
             <div className="mb-2 block">
               <Label htmlFor="quantity" value="Quantity" />
             </div>
@@ -189,7 +193,7 @@ const EditProduct = () => {
         {/* product img url */}
         <div>
           <div className="mb-2 block">
-            <Label htmlFor="productImgUrl" value="Product Img Link" />
+            <Label htmlFor="productImgUrl" value="Product Image Link" />
           </div>
           <TextInput
             id="productImgUrl"
@@ -223,7 +227,7 @@ const EditProduct = () => {
               </div>
             ))
           ) : (
-            <p className="text-red-400">upload img</p>
+            <p className="text-red-400">Upload image</p>
           )}
         </div>
 

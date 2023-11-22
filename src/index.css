@@ -15,6 +15,15 @@
   --bg-color-img: rgb(0, 100, 177, 0.5);
 }
 
+/**** SIDE BAR ****/
+nav.side__bar {
+  @apply h-[100vh] absolute lg:relative top-0 lg:left-0 transition-all duration-300 z-40;
+}
+
+.side__bar div {
+  @apply bg-gray-300;
+}
+
 body {
   /* background-color: white;
   color: rgba(0, 0, 0, 0.8); */

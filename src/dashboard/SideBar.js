@@ -52,11 +52,11 @@ const SideBar = ({ sideBarMenu, setSideBarMenu }) => {
               >
                 Manage Products
               </Sidebar.Item>
-              <Sidebar.Item href="#" icon={HiUser}>
+              <Sidebar.Item
+                href="/mini_e-commerce/admin/dasboard/users"
+                icon={HiUser}
+              >
                 Users
-              </Sidebar.Item>
-              <Sidebar.Item href="#" icon={HiShoppingBag}>
-                Products
               </Sidebar.Item>
             </div>
             <Sidebar.Item

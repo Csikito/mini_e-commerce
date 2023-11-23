@@ -9,7 +9,6 @@ const ManageProductsRow = ({ item, no }) => {
   const handleDeleteProduct = (id) => {
     const newProductList = product.filter((item) => item.id !== id);
     setProduct(newProductList);
-    console.log(newProductList);
   };
 
   return (

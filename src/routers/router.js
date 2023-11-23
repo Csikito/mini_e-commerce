@@ -10,6 +10,7 @@ import Dashboard from "../dashboard/Dashboard";
 import UploadProduct from "../dashboard/UploadProduct";
 import ManageProducts from "../dashboard/ManageProducts";
 import EditProduct from "../dashboard/EditProduct";
+import Users from "../dashboard/Users";
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
       {
         path: "/mini_e-commerce/admin/dasboard/manage",
         element: <ManageProducts />,
+      },
+      {
+        path: "/mini_e-commerce/admin/dasboard/users",
+        element: <Users />,
       },
       {
         path: "/mini_e-commerce/admin/dasboard/edit_product/:id",

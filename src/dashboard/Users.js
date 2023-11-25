@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Table } from "flowbite-react";
-
 import { Pagination } from "flowbite-react";
 import UsersRow from "./UsersRow";
 
@@ -29,24 +28,22 @@ const Users = () => {
       bought_products: 31,
     },
   ];
-
   const [users, setUsers] = useState(data);
-
-  const handleDeleteUser = (id) => {
-    const newProductList = users.filter((item) => item.id !== id);
-    setUsers(newProductList);
-  };
-
   const [currentPage, setCurrentPage] = useState(1);
+
   const porstsPerPage = 10;
   const pageNumbers = Math.ceil(users.length / porstsPerPage);
-
   const onPageChange = (page: number) => setCurrentPage(page);
 
   //Get current posts/page
   const indexTo = currentPage * porstsPerPage; //(2 * 10)
   const indexFrom = indexTo - porstsPerPage; // (20 - 10)
   const currentPosts = users.slice(indexFrom, indexTo); // slice(10, 20)
+
+  const handleDeleteUser = (id) => {
+    const newProductList = users.filter((item) => item.id !== id);
+    setUsers(newProductList);
+  };
 
   return (
     <section className="w-full p-5 lg:pr-8 overflow-x-auto">

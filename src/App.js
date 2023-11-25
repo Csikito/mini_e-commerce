@@ -6,7 +6,9 @@ function App() {
   return (
     <>
       <Navbar />
+
       <Outlet />
+
       <Footer />
     </>
   );

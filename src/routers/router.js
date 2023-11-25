@@ -11,6 +11,9 @@ import UploadProduct from "../dashboard/UploadProduct";
 import ManageProducts from "../dashboard/ManageProducts";
 import EditProduct from "../dashboard/EditProduct";
 import Users from "../dashboard/Users";
+import Login from "../components/Login";
+import Register from "../components/Register";
+import ForgotPassword from "../components/ForgotPassword";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +35,18 @@ const router = createBrowserRouter([
       {
         path: "/mini_e-commerce/successful_purchase",
         element: <SuccessfulPurchase />,
+      },
+      {
+        path: "/mini_e-commerce/login",
+        element: <Login />,
+      },
+      {
+        path: "/mini_e-commerce/register",
+        element: <Register />,
+      },
+      {
+        path: "/mini_e-commerce/forgot_password",
+        element: <ForgotPassword />,
       },
     ],
   },

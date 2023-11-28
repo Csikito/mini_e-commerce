@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/mini_e-commerce/static/css/main.e826504d.css",
-    "main.js": "/mini_e-commerce/static/js/main.7436c1f6.js",
+    "main.css": "/mini_e-commerce/static/css/main.8e4d534f.css",
+    "main.js": "/mini_e-commerce/static/js/main.284fadf1.js",
     "static/media/fig_1.png": "/mini_e-commerce/static/media/fig_1.535e8d35661deed729a1.png",
     "static/media/figure.png": "/mini_e-commerce/static/media/figure.535e8d35661deed729a1.png",
     "static/media/p_fig_2.png": "/mini_e-commerce/static/media/p_fig_2.67cf038d9f28e5b51ff6.png",
@@ -46,11 +46,11 @@
     "static/media/banner.jpg": "/mini_e-commerce/static/media/banner.3aabcb95f658b1b92657.jpg",
     "static/media/luka_logo.png": "/mini_e-commerce/static/media/luka_logo.3159370aca0d10ab40b6.png",
     "index.html": "/mini_e-commerce/index.html",
-    "main.e826504d.css.map": "/mini_e-commerce/static/css/main.e826504d.css.map",
-    "main.7436c1f6.js.map": "/mini_e-commerce/static/js/main.7436c1f6.js.map"
+    "main.8e4d534f.css.map": "/mini_e-commerce/static/css/main.8e4d534f.css.map",
+    "main.284fadf1.js.map": "/mini_e-commerce/static/js/main.284fadf1.js.map"
   },
   "entrypoints": [
-    "static/css/main.e826504d.css",
-    "static/js/main.7436c1f6.js"
+    "static/css/main.8e4d534f.css",
+    "static/js/main.284fadf1.js"
   ]
 }
